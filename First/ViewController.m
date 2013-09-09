@@ -20,19 +20,10 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)viewDidUnload
+-(IBAction)onClicked:(id)sender
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
-    }
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"POP UP" message:@"짜잔" delegate:self cancelButtonTitle:@"치우기" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 @end
